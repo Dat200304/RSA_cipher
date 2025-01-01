@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Numerics;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -25,11 +26,21 @@ namespace RSA
                 string publicKey = rsa.ToXmlString(false);  // Public key
                 string privateKey = rsa.ToXmlString(true);  // Private key
 
-                // Hiển thị khóa
+                // Lấy tham số RSA
+                RSAParameters parameters = rsa.ExportParameters(true);
+
+                // Lấy giá trị p, q và e
+                BigInteger p = new BigInteger(parameters.P);  // Chuyển đổi mảng byte của p thành số nguyên
+                BigInteger q = new BigInteger(parameters.Q);  // Chuyển đổi mảng byte của q thành số nguyên
+                BigInteger exponent = new BigInteger(parameters.Exponent);  // Chuyển đổi mảng byte của e thành số nguyên
+
+
+                // Hiển thị khóa và tham số
                 textBox1.Text = publicKey;
                 textBox2.Text = privateKey;
-
-
+                textBox7.Text = "p: " + p.ToString();  // Hiển thị p dưới dạng số nguyên
+                textBox8.Text = "q: " + q.ToString();  // Hiển thị q dưới dạng số nguyên
+                textBox9.Text = "e: " + exponent.ToString();  // Hiển thị e dưới dạng số nguyên
             }
             catch (Exception ex)
             {

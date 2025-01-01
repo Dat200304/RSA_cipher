@@ -48,6 +48,9 @@ namespace RSA
             label3 = new Label();
             label4 = new Label();
             panel1 = new Panel();
+            textBox9 = new TextBox();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -111,7 +114,6 @@ namespace RSA
             // 
             // label1
             // 
-            
             label1.Location = new Point(21, 286);
             label1.Name = "label1";
             label1.Size = new Size(62, 25);
@@ -121,7 +123,6 @@ namespace RSA
             // 
             // label2
             // 
-        
             label2.Location = new Point(21, 480);
             label2.Name = "label2";
             label2.Size = new Size(62, 25);
@@ -131,7 +132,6 @@ namespace RSA
             // 
             // label5
             // 
-            
             label5.Location = new Point(12, 67);
             label5.Name = "label5";
             label5.Size = new Size(120, 25);
@@ -141,7 +141,6 @@ namespace RSA
             // 
             // label6
             // 
-            
             label6.Location = new Point(22, 66);
             label6.Name = "label6";
             label6.Size = new Size(120, 25);
@@ -180,7 +179,6 @@ namespace RSA
             // 
             // label3
             // 
-        
             label3.Location = new Point(22, 285);
             label3.Name = "label3";
             label3.Size = new Size(62, 25);
@@ -190,7 +188,6 @@ namespace RSA
             // 
             // label4
             // 
-       
             label4.Location = new Point(22, 479);
             label4.Name = "label4";
             label4.Size = new Size(62, 25);
@@ -213,15 +210,39 @@ namespace RSA
             panel1.Size = new Size(566, 749);
             panel1.TabIndex = 15;
             // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(433, 19);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(125, 27);
+            textBox9.TabIndex = 18;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(302, 19);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(125, 27);
+            textBox8.TabIndex = 17;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(170, 19);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(125, 27);
+            textBox7.TabIndex = 16;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(1124, 741);
+            Controls.Add(textBox9);
             Controls.Add(panel1);
+            Controls.Add(textBox8);
             Controls.Add(label5);
             Controls.Add(label2);
+            Controls.Add(textBox7);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -254,5 +275,8 @@ namespace RSA
         private Label label3;
         private Label label4;
         private Panel panel1;
+        private TextBox textBox9;
+        private TextBox textBox8;
+        private TextBox textBox7;
     }
 }
